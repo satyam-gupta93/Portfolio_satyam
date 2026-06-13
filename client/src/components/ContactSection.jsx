@@ -102,7 +102,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 relative bg-background">
+    <section id="contact" className="relative bg-background px-4 py-12 sm:px-6 sm:py-16 md:py-20">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12 sm:mb-16">
           <span className="inline-block px-3 py-1 text-xs sm:text-sm font-medium rounded-full bg-red-500/10 text-red-500 mb-3 sm:mb-4">
@@ -116,16 +116,16 @@ export const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-6 sm:space-y-8 p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-red-500/10 to-background border border-border text-left">
+          <div className="space-y-5 rounded-xl border border-border bg-gradient-to-br from-red-500/10 to-background p-4 text-left sm:space-y-8 sm:rounded-2xl sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
               <span className="w-3 sm:w-4 h-3 sm:h-4 rounded-full bg-red-500"></span>
               Contact Details
             </h3>
 
             <div className="space-y-4 sm:space-y-6">
-              <div className="grid grid-cols-[3rem_1fr] sm:grid-cols-[3.5rem_1fr] items-center gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-[2.75rem_1fr] items-center gap-3 rounded-lg p-3 transition-all duration-300 hover:bg-accent/30 sm:grid-cols-[3.5rem_1fr] sm:gap-4 sm:rounded-xl sm:p-4">
                 <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
@@ -140,7 +140,7 @@ export const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-[3rem_1fr] sm:grid-cols-[3.5rem_1fr] items-center gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-[2.75rem_1fr] items-center gap-3 rounded-lg p-3 transition-all duration-300 hover:bg-accent/30 sm:grid-cols-[3.5rem_1fr] sm:gap-4 sm:rounded-xl sm:p-4">
                 <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center">
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
@@ -155,7 +155,7 @@ export const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-[3rem_1fr] sm:grid-cols-[3.5rem_1fr] items-center gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-[2.75rem_1fr] items-center gap-3 rounded-lg p-3 transition-all duration-300 hover:bg-accent/30 sm:grid-cols-[3.5rem_1fr] sm:gap-4 sm:rounded-xl sm:p-4">
                 <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center">
                   <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
                 </div>
@@ -170,7 +170,7 @@ export const ContactSection = () => {
 
             <div className="pt-6 sm:pt-8">
               <h4 className="font-medium mb-3 sm:mb-4 text-xs sm:text-sm text-muted-foreground text-left">Find me on</h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+              <div className="grid grid-cols-1 gap-2 min-[360px]:grid-cols-2 sm:grid-cols-3 sm:gap-3">
                 {[
                   {
                     icon: Linkedin,
@@ -210,7 +210,7 @@ export const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-6 sm:p-8 rounded-xl sm:rounded-2xl bg-card border border-border shadow-sm text-left">
+          <div className="rounded-xl border border-border bg-card p-4 text-left shadow-sm sm:rounded-2xl sm:p-8">
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 flex items-center gap-2">
               <span className="w-3 sm:w-4 h-3 sm:h-4 rounded-full bg-red-500"></span>
               Send Me a Message
@@ -301,3 +301,4 @@ export const ContactSection = () => {
     </section>
   );
 };
+

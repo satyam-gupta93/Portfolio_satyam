@@ -76,7 +76,7 @@
 
 //       <div className="container max-w-5xl mx-auto text-center z-10">
 //         <motion.div
-//           className="space-y-8"
+//           className="space-y-6 sm:space-y-8"
 //           variants={containerVariants}
 //           initial="hidden"
 //           animate={isInView ? "visible" : "hidden"}
@@ -121,7 +121,7 @@
 //           </motion.p>
 
 //           <motion.div 
-//             className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
+//             className="flex flex-col justify-center gap-4 pt-6 sm:flex-row sm:gap-6 sm:pt-8"
 //             variants={itemVariants}
 //           >
 //             <motion.a 
@@ -193,7 +193,7 @@
 //       </motion.div>
 
 //       <motion.div 
-//         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+//         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 transform flex-col items-center sm:flex"
 //         initial={{ opacity: 0, y: 20 }}
 //         animate={{ 
 //           opacity: [0, 1, 1, 0],
@@ -364,7 +364,7 @@
 //       {/* Main hero content */}
 //       <div className="container max-w-5xl mx-auto text-center z-10">
 //         <motion.div
-//           className="space-y-8"
+//           className="space-y-6 sm:space-y-8"
 //           variants={containerVariants}
 //           initial="hidden"
 //           animate={isInView ? "visible" : "hidden"}
@@ -384,7 +384,7 @@
 
 //           {/* Code-styled Name */}
 //           <motion.h1
-//             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-mono"
+//             className="text-3xl font-bold tracking-tight font-mono sm:text-5xl md:text-6xl lg:text-7xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-muted-foreground">{"<h1>"}</span>{" "}
@@ -394,7 +394,7 @@
 
 //           {/* Subtitle in terminal style */}
 //           <motion.p
-//             className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-mono"
+//             className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground font-mono sm:text-base md:text-lg lg:text-xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-green-500">$</span> npm run <span className="text-primary">build</span> → <span className="text-secondary">"Crafting scalable apps & solving real-world problems"</span>
@@ -402,12 +402,12 @@
 
 //           {/* Buttons */}
 //           <motion.div
-//             className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
+//             className="flex flex-col justify-center gap-4 pt-6 sm:flex-row sm:gap-6 sm:pt-8"
 //             variants={itemVariants}
 //           >
 //             <motion.a
 //               href="#projects"
-//               className="relative cosmic-button group overflow-hidden px-6 py-3 rounded-md font-mono text-sm md:text-base"
+//               className="relative cosmic-button group overflow-hidden rounded-md px-4 py-3 text-sm font-mono sm:px-6 md:text-base"
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //             >
@@ -462,7 +462,7 @@
 
 //       {/* Scroll Indicator */}
 //       <motion.div
-//         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+//         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 transform flex-col items-center sm:flex"
 //         initial={{ opacity: 0, y: 20 }}
 //         animate={{ opacity: [0, 1, 1, 0], y: [0, 10, 0, -10] }}
 //         transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 0.5, ease: "easeInOut" }}
@@ -583,7 +583,7 @@
 //       {/* Main hero content */}
 //       <div className="container max-w-5xl mx-auto text-center z-10">
 //         <motion.div
-//           className="space-y-8"
+//           className="space-y-6 sm:space-y-8"
 //           variants={containerVariants}
 //           initial="hidden"
 //           animate={isInView ? "visible" : "hidden"}
@@ -603,7 +603,7 @@
 
 //           {/* Code-styled Name */}
 //           <motion.h1
-//             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-mono"
+//             className="text-3xl font-bold tracking-tight font-mono sm:text-5xl md:text-6xl lg:text-7xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-muted-foreground">{"<h1>"}</span>{" "}
@@ -613,7 +613,7 @@
 
 //           {/* Subtitle in terminal style */}
 //           <motion.p
-//             className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-mono"
+//             className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground font-mono sm:text-base md:text-lg lg:text-xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-green-500">$</span> npm run <span className="text-primary">build</span> → <span className="text-secondary">"Crafting scalable apps & solving real-world problems"</span>
@@ -621,12 +621,12 @@
 
 //           {/* Buttons */}
 //           <motion.div
-//             className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
+//             className="flex flex-col justify-center gap-4 pt-6 sm:flex-row sm:gap-6 sm:pt-8"
 //             variants={itemVariants}
 //           >
 //             <motion.a
 //               href="#projects"
-//               className="relative cosmic-button group overflow-hidden px-6 py-3 rounded-md font-mono text-sm md:text-base"
+//               className="relative cosmic-button group overflow-hidden rounded-md px-4 py-3 text-sm font-mono sm:px-6 md:text-base"
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //             >
@@ -681,7 +681,7 @@
 
 //       {/* Interesting Floating Button - Bottom Right */}
 //       <motion.div
-//         className="fixed bottom-6 right-6 z-50"
+//         className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6"
 //         initial={{ scale: 0, rotate: -180 }}
 //         animate={{ scale: 1, rotate: 0 }}
 //         transition={{ delay: 1, duration: 0.8, type: "spring", bounce: 0.4 }}
@@ -694,7 +694,7 @@
 //           whileTap={{ scale: 0.9 }}
 //           onClick={() => {
 //             // Add your custom action here
-//             window.open('mailto:satyam@example.com', '_blank');
+//             window.open('mailto:satyamgupta9302@gmail.com', '_blank');
 //           }}
 //         >
 //           {/* Main button circle */}
@@ -787,7 +787,7 @@
 
 //       {/* Scroll Indicator */}
 //       <motion.div
-//         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+//         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 transform flex-col items-center sm:flex"
 //         initial={{ opacity: 0, y: 20 }}
 //         animate={{ opacity: [0, 1, 1, 0], y: [0, 10, 0, -10] }}
 //         transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 0.5, ease: "easeInOut" }}
@@ -905,7 +905,7 @@
 //       {/* Main hero content */}
 //       <div className="container max-w-5xl mx-auto text-center z-10">
 //         <motion.div
-//           className="space-y-8"
+//           className="space-y-6 sm:space-y-8"
 //           variants={containerVariants}
 //           initial="hidden"
 //           animate={isInView ? "visible" : "hidden"}
@@ -925,7 +925,7 @@
 
 //           {/* Code-styled Name */}
 //           <motion.h1
-//             className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-mono"
+//             className="text-3xl font-bold tracking-tight font-mono sm:text-5xl md:text-6xl lg:text-7xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-muted-foreground">{"<h1>"}</span>{" "}
@@ -935,7 +935,7 @@
 
 //           {/* Subtitle in terminal style */}
 //           <motion.p
-//             className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-mono"
+//             className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground font-mono sm:text-base md:text-lg lg:text-xl"
 //             variants={itemVariants}
 //           >
 //             <span className="text-green-500">$</span> npm run <span className="text-primary">build</span> → <span className="text-secondary">"Crafting scalable apps & solving real-world problems"</span>
@@ -943,12 +943,12 @@
 
 //           {/* Buttons */}
 //           <motion.div
-//             className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
+//             className="flex flex-col justify-center gap-4 pt-6 sm:flex-row sm:gap-6 sm:pt-8"
 //             variants={itemVariants}
 //           >
 //             <motion.a
 //               href="#projects"
-//               className="relative cosmic-button group overflow-hidden px-6 py-3 rounded-md font-mono text-sm md:text-base"
+//               className="relative cosmic-button group overflow-hidden rounded-md px-4 py-3 text-sm font-mono sm:px-6 md:text-base"
 //               whileHover={{ scale: 1.05 }}
 //               whileTap={{ scale: 0.95 }}
 //             >
@@ -971,7 +971,7 @@
 
 //       {/* Enhanced Sidebar */}
 //       <motion.div
-//         className="fixed left-6 bottom-0 top-0 flex flex-col items-center justify-end gap-3 z-50"
+//         className="fixed bottom-0 left-3 z-50 hidden flex-col items-center justify-end gap-3 sm:flex lg:left-6"
 //         initial={{ x: -50, opacity: 0 }}
 //         animate={{ x: 0, opacity: 1 }}
 //         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -1204,7 +1204,7 @@
 
 //       {/* Interesting Floating Button - Bottom Right */}
 //       <motion.div
-//         className="fixed bottom-6 right-6 z-50"
+//         className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6"
 //         initial={{ scale: 0, rotate: -180 }}
 //         animate={{ scale: 1, rotate: 0 }}
 //         transition={{ delay: 1, duration: 0.8, type: "spring", bounce: 0.4 }}
@@ -1217,7 +1217,7 @@
 //           whileTap={{ scale: 0.9 }}
 //           onClick={() => {
 //             // Add your custom action here
-//             window.open('mailto:satyam@example.com', '_blank');
+//             window.open('mailto:satyamgupta9302@gmail.com', '_blank');
 //           }}
 //         >
 //           {/* Main button circle */}
@@ -1310,7 +1310,7 @@
 
 //       {/* Scroll Indicator */}
 //       <motion.div
-//         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+//         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 transform flex-col items-center sm:flex"
 //         initial={{ opacity: 0, y: 20 }}
 //         animate={{ opacity: [0, 1, 1, 0], y: [0, 10, 0, -10] }}
 //         transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 0.5, ease: "easeInOut" }}
@@ -1395,7 +1395,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden bg-gradient-to-b from-background via-background/80 to-red-500/5"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background/80 to-red-500/5 px-4 pt-28 pb-24 sm:pt-24"
       ref={ref}
     >
       {/* Floating particles */}
@@ -1428,7 +1428,7 @@ export const HeroSection = () => {
       {/* Main hero content */}
       <div className="container max-w-5xl mx-auto text-center z-10">
         <motion.div
-          className="space-y-8"
+          className="space-y-6 sm:space-y-8"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -1436,7 +1436,7 @@ export const HeroSection = () => {
           {/* Tagline */}
           <motion.div variants={itemVariants}>
             <motion.div
-              className="text-sm md:text-base font-mono text-red-500 mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20"
+              className="mx-auto mb-4 inline-flex max-w-full flex-wrap items-center justify-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-3 py-1.5 text-xs font-mono text-red-500 sm:px-4 sm:text-sm md:text-base"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -1448,7 +1448,7 @@ export const HeroSection = () => {
 
           {/* Code-styled Name */}
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight font-mono"
+            className="text-3xl font-bold tracking-tight font-mono sm:text-5xl md:text-6xl lg:text-7xl"
             variants={itemVariants}
           >
             <span className="text-muted-foreground">{"<h1>"}</span>{" "}
@@ -1458,7 +1458,7 @@ export const HeroSection = () => {
 
           {/* Subtitle in terminal style */}
           <motion.p
-            className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-mono"
+            className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground font-mono sm:text-base md:text-lg lg:text-xl"
             variants={itemVariants}
           >
             <span className="text-green-500">$</span> npm run <span className="text-red-500">build</span> → <span className="text-secondary">"Crafting scalable apps & solving real-world problems"</span>
@@ -1466,12 +1466,12 @@ export const HeroSection = () => {
 
           {/* Buttons */}
           <motion.div
-            className="pt-8 flex flex-col sm:flex-row justify-center gap-6"
+            className="flex flex-col justify-center gap-4 pt-6 sm:flex-row sm:gap-6 sm:pt-8"
             variants={itemVariants}
           >
             <motion.a
               href="#projects"
-              className="relative cosmic-button group overflow-hidden px-6 py-3 rounded-md font-mono text-sm md:text-base"
+              className="relative cosmic-button group overflow-hidden rounded-md px-4 py-3 text-sm font-mono sm:px-6 md:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -1481,7 +1481,7 @@ export const HeroSection = () => {
 
             <motion.a
               href="#contact"
-              className="relative outline-button group overflow-hidden px-6 py-3 rounded-md font-mono text-sm md:text-base border-2 border-red-500/50 hover:border-red-500 transition-colors"
+              className="relative outline-button group overflow-hidden rounded-md border-2 border-red-500/50 px-4 py-3 text-sm font-mono transition-colors hover:border-red-500 sm:px-6 md:text-base"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -1494,7 +1494,7 @@ export const HeroSection = () => {
 
       {/* Enhanced Sidebar */}
       <motion.div
-        className="fixed left-6 bottom-0 top-0 flex flex-col items-center justify-end gap-3 z-50"
+        className="fixed bottom-0 left-3 z-50 hidden flex-col items-center justify-end gap-3 sm:flex lg:left-6"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -1724,7 +1724,7 @@ export const HeroSection = () => {
 
       {/* Interesting Floating Button - Bottom Right */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6"
         initial={{ scale: 0, rotate: -180 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{ delay: 1, duration: 0.8, type: "spring", bounce: 0.4 }}
@@ -1736,12 +1736,12 @@ export const HeroSection = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => {
-            window.open('mailto:satyam@example.com', '_blank');
+            window.open('mailto:satyamgupta9302@gmail.com', '_blank');
           }}
         >
           {/* Main button circle */}
           <motion.div
-            className="w-14 h-14 rounded-full bg-gradient-to-r from-red-600 to-red-400 shadow-lg shadow-red-500/25 flex items-center justify-center relative overflow-hidden"
+            className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-red-600 to-red-400 shadow-lg shadow-red-500/25 sm:h-14 sm:w-14"
             animate={{
               boxShadow: isHovered 
                 ? "0 20px 40px rgba(239, 68, 68, 0.4)" 
@@ -1829,7 +1829,7 @@ export const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 transform flex-col items-center sm:flex"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: [0, 1, 1, 0], y: [0, 10, 0, -10] }}
         transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 0.5, ease: "easeInOut" }}

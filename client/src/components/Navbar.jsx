@@ -151,7 +151,7 @@
 //   animate={{ y: 0, opacity: 1 }}
 //   transition={{ duration: 0.3 }}
 // >
-//   <div className="flex items-center justify-between bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+//   <div className="flex flex-wrap items-center justify-between gap-3 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-4 py-3 border-b border-gray-200 dark:border-gray-700 sm:px-6">
     
 //     {/* Left side - Logo / Brand */}
 //     <a href="#hero" className="text-xl font-bold text-primary">
@@ -159,13 +159,13 @@
 //     </a>
 
 //     {/* Middle - Nav Items */}
-//     <div className="flex space-x-6">
+//     <div className="order-3 flex w-full gap-2 overflow-x-auto pb-1 md:order-none md:w-auto md:gap-5 md:overflow-visible md:pb-0 lg:gap-6">
 //       {navItems.map((item) => (
 //         <a
 //           key={item.name}
 //           href={item.href}
 //           className={cn(
-//             "flex items-center space-x-1 text-sm font-medium transition-colors",
+//             "flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:text-sm md:px-0 md:py-0",
 //             activeSection === item.href
 //               ? "text-primary"
 //               : "text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
@@ -178,7 +178,7 @@
 //     </div>
 
 //     {/* Right side - Actions */}
-//     <div className="flex items-center gap-3">
+//     <div className="flex items-center gap-2 sm:gap-3">
 //       {/* GitHub */}
 //       <a
 //         href="https://github.com/sahilmd01"
@@ -380,7 +380,7 @@
 //         animate={{ y: 0, opacity: 1 }}
 //         transition={{ duration: 0.3 }}
 //       >
-//         <div className="flex items-center justify-between bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+//         <div className="flex flex-wrap items-center justify-between gap-3 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-4 py-3 border-b border-gray-200 dark:border-gray-700 sm:px-6">
           
 //           {/* Left side - Logo / Brand */}
 //           <a href="#hero" className="text-xl font-bold text-primary">
@@ -388,13 +388,13 @@
 //           </a>
 
 //           {/* Middle - Nav Items */}
-//           <div className="flex space-x-6">
+//           <div className="order-3 flex w-full gap-2 overflow-x-auto pb-1 md:order-none md:w-auto md:gap-5 md:overflow-visible md:pb-0 lg:gap-6">
 //             {navItems.map((item) => (
 //               <a
 //                 key={item.name}
 //                 href={item.href}
 //                 className={cn(
-//                   "flex items-center space-x-1 text-sm font-medium transition-colors",
+//                   "flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:text-sm md:px-0 md:py-0",
 //                   activeSection === item.href
 //                     ? "text-primary"
 //                     : "text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary"
@@ -407,7 +407,7 @@
 //           </div>
 
 //           {/* Right side - Actions */}
-//           <div className="flex items-center gap-3">
+//           <div className="flex items-center gap-2 sm:gap-3">
 //             {/* Music */}
             
 
@@ -577,23 +577,23 @@ export const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="flex items-center justify-between bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-6 py-3 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex flex-wrap items-center justify-between gap-3 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-lg px-4 py-3 border-b border-gray-200 dark:border-gray-700 sm:px-6">
 
           {/* Left side - Logo / Brand */}
-          <a href="#hero" className="text-xl font-bold text-red-500">
+          <a href="#hero" className="text-lg font-bold text-red-500 sm:text-xl">
             Satyam.
           </a>
 
           {/* Middle - Nav Items */}
-          <div className="flex space-x-6">
+          <div className="order-3 flex w-full gap-2 overflow-x-auto pb-1 md:order-none md:w-auto md:gap-5 md:overflow-visible md:pb-0 lg:gap-6">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "flex items-center space-x-1 text-sm font-medium transition-colors",
+                  "flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-medium transition-colors sm:text-sm md:px-0 md:py-0",
                   activeSection === item.href
-                    ? "text-red-500"
+                    ? "bg-red-500/10 text-red-500 md:bg-transparent"
                     : "text-gray-600 hover:text-red-500 dark:text-gray-300 dark:hover:text-red-500"
                 )}
               >
@@ -604,13 +604,13 @@ export const Navbar = () => {
           </div>
 
           {/* Right side - Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {/* Resume Button */}
             <a
               href="/Satyam_Gupta_IIIT_Nagpur_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 px-6 py-2 rounded-sm bg-red-500 text-white text-sm font-medium hover:bg-red-600 transition-colors"
+              className="rounded-sm bg-red-500 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-red-600 sm:px-5 sm:text-sm md:px-6"
             >
               Resume
             </a>

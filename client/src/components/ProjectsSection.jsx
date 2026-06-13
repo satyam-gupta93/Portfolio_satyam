@@ -126,7 +126,7 @@ export const ProjectsSection = () => {
   return (
     <section 
       id="projects" 
-      className="relative py-16 md:py-24 lg:py-32 overflow-hidden"
+      className="relative overflow-hidden py-14 sm:py-16 md:py-24 lg:py-32"
       ref={sectionRef}
     >
       {/* Animated background elements */}
@@ -163,17 +163,17 @@ export const ProjectsSection = () => {
         }}
       />
 
-      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative">
+      <div className="container relative mx-auto max-w-7xl px-4 sm:px-6">
         {/* Section header with animation */}
         <motion.div 
-          className="text-center mb-12 md:mb-20"
+          className="mb-10 text-center md:mb-16 lg:mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
         >
           <motion.span 
-            className="inline-flex items-center gap-2 text-xs font-medium tracking-widest text-red-500/80 uppercase mb-4 md:mb-6"
+            className="mb-4 inline-flex max-w-full flex-wrap items-center justify-center gap-2 text-center text-[0.68rem] font-medium uppercase tracking-widest text-red-500/80 sm:text-xs md:mb-6"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -185,7 +185,7 @@ export const ProjectsSection = () => {
           </motion.span>
           
           <motion.h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6"
+            className="mb-4 text-3xl font-bold sm:text-4xl md:mb-6 md:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -199,7 +199,7 @@ export const ProjectsSection = () => {
           </motion.h2>
           
           <motion.p 
-            className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+            className="mx-auto max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg lg:text-xl"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -210,9 +210,9 @@ export const ProjectsSection = () => {
         </motion.div>
 
         {/* Interactive filter tabs - Desktop */}
-        <div className="hidden md:flex justify-center mb-12">
+        <div className="mb-12 hidden justify-center md:flex">
           <motion.div 
-            className="inline-flex bg-muted p-1 rounded-full border border-muted-foreground/10 shadow-sm"
+            className="flex max-w-full flex-wrap justify-center gap-1 rounded-2xl border border-muted-foreground/10 bg-muted p-1 shadow-sm lg:rounded-full"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
@@ -225,7 +225,7 @@ export const ProjectsSection = () => {
                   setActiveFilter(category);
                   setShowAll(false);
                 }}
-                className={`px-5 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 lg:px-5 lg:text-sm ${
                   activeFilter === category
                     ? "bg-background text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
@@ -238,17 +238,17 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Mobile filter dropdown */}
-        <div className="md:hidden relative mb-8 max-w-xs mx-auto">
+        <div className="relative mx-auto mb-8 max-w-xs md:hidden">
           <motion.button
             onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
             whileTap={{ scale: 0.98 }}
-            className="w-full flex items-center justify-between px-4 py-3 bg-background border border-muted-foreground/20 rounded-lg shadow-sm"
+            className="flex w-full items-center justify-between gap-3 rounded-lg border border-muted-foreground/20 bg-background px-4 py-3 text-left shadow-sm"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <span>{activeFilter}</span>
+            <span className="truncate">{activeFilter}</span>
             <ChevronDown 
               size={16} 
               className={`transition-transform duration-200 ${isMobileFilterOpen ? "rotate-180" : ""}`}
@@ -286,7 +286,7 @@ export const ProjectsSection = () => {
         </div>
 
         {/* Projects grid - Enhanced masonry layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 gap-5 auto-rows-fr sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
           <AnimatePresence>
             {displayedProjects.map((project) => (
               <motion.div
@@ -304,7 +304,7 @@ export const ProjectsSection = () => {
                 {/* Featured badge */}
                 {project.featured && (
                   <motion.div 
-                    className="absolute top-4 right-4 bg-gradient-to-br from-amber-400 to-amber-600 text-amber-900 px-2.5 py-1 rounded-full text-[0.7rem] font-bold flex items-center z-10 shadow-md"
+                    className="absolute right-3 top-3 z-10 flex items-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 px-2 py-1 text-[0.65rem] font-bold text-amber-900 shadow-md sm:right-4 sm:top-4 sm:px-2.5 sm:text-[0.7rem]"
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2 }}
@@ -314,10 +314,10 @@ export const ProjectsSection = () => {
                 )}
 
                 {/* Project image with hover effect */}
-                <div className="h-52 sm:h-56 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-end p-5">
+                <div className="relative h-44 overflow-hidden sm:h-52 md:h-56">
+                  <div className="absolute inset-0 z-10 flex items-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 opacity-100 transition-opacity duration-500 sm:p-5 md:opacity-0 md:group-hover:opacity-100">
                     <motion.p 
-                      className="text-white/90 text-sm translate-y-5 group-hover:translate-y-0 transition-transform duration-500"
+                      className="text-xs text-white/90 transition-transform duration-500 md:translate-y-5 md:text-sm md:group-hover:translate-y-0"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.2 }}
@@ -334,12 +334,12 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Project content */}
-                <div className="p-5 pt-3">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-red-500 transition-colors duration-300">
+                <div className="p-4 pt-3 sm:p-5 sm:pt-3">
+                  <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                    <h3 className="text-base font-bold text-foreground transition-colors duration-300 group-hover:text-red-500 sm:text-lg">
                       {project.title}
                     </h3>
-                    <span className={`text-xs font-medium px-2 py-1 rounded ${
+                    <span className={`w-fit rounded px-2 py-1 text-[0.68rem] font-medium leading-tight sm:text-xs ${
                       categoryColors[project.category] || "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200"
                     }`}>
                       {project.category}
@@ -364,12 +364,12 @@ export const ProjectsSection = () => {
                   </div>
 
                   {/* Action buttons */}
-                  <div className="flex justify-between items-center border-t border-muted/20 pt-3">
+                  <div className="flex flex-col gap-3 border-t border-muted/20 pt-3 min-[380px]:flex-row min-[380px]:items-center min-[380px]:justify-between">
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 text-sm font-medium ${
+                      className={`inline-flex items-center gap-1.5 text-xs font-medium sm:text-sm ${
                         project.demoUrl === "#"
                           ? "text-muted-foreground cursor-not-allowed"
                           : "text-foreground/80 hover:text-red-500 group"
@@ -384,7 +384,7 @@ export const ProjectsSection = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-1.5 text-sm font-medium ${
+                      className={`inline-flex items-center gap-1.5 text-xs font-medium sm:text-sm ${
                         project.githubUrl === "#"
                           ? "text-muted-foreground cursor-not-allowed"
                           : "text-foreground/80 hover:text-red-500 group"
@@ -444,7 +444,7 @@ export const ProjectsSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-muted/30 to-muted/10 border border-muted-foreground/10 rounded-xl p-6 md:p-8 max-w-3xl mx-auto">
+          <div className="mx-auto max-w-3xl rounded-xl border border-muted-foreground/10 bg-gradient-to-r from-muted/30 to-muted/10 p-5 sm:p-6 md:p-8">
             <h3 className="text-xl md:text-2xl font-bold mb-3">Have a project in mind?</h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Let's collaborate to bring your vision to life with cutting-edge technology and exceptional design.
@@ -477,3 +477,4 @@ export const ProjectsSection = () => {
     </section>
   );
 };
+

@@ -56,10 +56,10 @@ const skills = [
 ];
 
 const categories = [
-  { id: "all", label: "All Skills", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
-  { id: "frontend", label: "Frontend", color: "bg-gradient-to-r from-blue-500 to-cyan-500" },
-  { id: "backend", label: "Backend", color: "bg-gradient-to-r from-green-500 to-emerald-500" },
-  { id: "tools", label: "Tools", color: "bg-gradient-to-r from-orange-500 to-yellow-500" },
+  { id: "all", label: "All Skills", color: "bg-gradient-to-r from-red-600 to-red-400" },
+  { id: "frontend", label: "Frontend", color: "bg-gradient-to-r from-red-600 to-red-400" },
+  { id: "backend", label: "Backend", color: "bg-gradient-to-r from-red-600 to-red-400" },
+  { id: "tools", label: "Tools", color: "bg-gradient-to-r from-red-600 to-red-400" },
 ];
 
 // Create an icon mapping object
@@ -121,10 +121,10 @@ const InfiniteScrollSkills = ({ skills }) => {
   const duplicatedSkills = [...skills, ...skills, ...skills];
   
   return (
-    <div className="overflow-hidden py-8">
+    <div className="overflow-hidden py-5 sm:py-8">
       {/* First row */}
       <motion.div
-        className="flex gap-8 mb-8"
+        className="mb-6 flex gap-4 sm:mb-8 sm:gap-8"
         animate={{ 
           x: ["0%", "-100%"],
           transition: { 
@@ -139,16 +139,16 @@ const InfiniteScrollSkills = ({ skills }) => {
           return (
             <div 
               key={`${skill.name}-${index}`} 
-              className="flex-shrink-0 flex flex-col items-center gap-2"
+              className="flex-shrink-0 flex w-20 flex-col items-center gap-2 sm:w-24"
             >
-              <div className="w-16 h-16 rounded-full bg-card border-2 border-red-500/50 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-red-500/50 bg-card shadow-lg transition-transform hover:scale-110 sm:h-16 sm:w-16">
                 <img 
                   src={iconSrc} 
                   alt={skill.name} 
-                  className="w-8 h-8 object-contain" 
+                  className="h-6 w-6 object-contain sm:h-8 sm:w-8" 
                 />
               </div>
-              <span className="text-sm font-medium text-center">{skill.name}</span>
+              <span className="text-center text-xs font-medium sm:text-sm">{skill.name}</span>
             </div>
           );
         })}
@@ -156,7 +156,7 @@ const InfiniteScrollSkills = ({ skills }) => {
       
       {/* Second row (reverse direction) */}
       <motion.div
-        className="flex gap-8"
+        className="flex gap-4 sm:gap-8"
         animate={{ 
           x: ["-100%", "0%"],
           transition: { 
@@ -171,16 +171,16 @@ const InfiniteScrollSkills = ({ skills }) => {
           return (
             <div 
               key={`${skill.name}-reverse-${index}`} 
-              className="flex-shrink-0 flex flex-col items-center gap-2"
+              className="flex-shrink-0 flex w-20 flex-col items-center gap-2 sm:w-24"
             >
-              <div className="w-16 h-16 rounded-full bg-card border-2 border-red-500/50 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-red-500/50 bg-card shadow-lg transition-transform hover:scale-110 sm:h-16 sm:w-16">
                 <img 
                   src={iconSrc} 
                   alt={skill.name} 
-                  className="w-8 h-8 object-contain" 
+                  className="h-6 w-6 object-contain sm:h-8 sm:w-8" 
                 />
               </div>
-              <span className="text-sm font-medium text-center">{skill.name}</span>
+              <span className="text-center text-xs font-medium sm:text-sm">{skill.name}</span>
             </div>
           );
         })}
@@ -197,25 +197,25 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-28 px-4 relative bg-gradient-to-br from-background via-secondary/5 to-background">
+    <section id="skills" className="relative bg-gradient-to-br from-background via-red-500/5 to-background px-4 py-14 sm:py-20 lg:py-28">
       <div className="container mx-auto max-w-6xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="mb-10 text-center sm:mb-14 lg:mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-red-400">
+          <h2 className="mb-4 bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl">
             My Skills
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base md:text-lg">
             Technologies I've mastered and my proficiency levels
           </p>
         </motion.div>
 
         <motion.div 
-          className="flex flex-wrap justify-center gap-3 mb-16"
+          className="mb-10 flex flex-wrap justify-center gap-2 sm:mb-16 sm:gap-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ staggerChildren: 0.1 }}
@@ -226,7 +226,7 @@ export const SkillsSection = () => {
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
               className={[
-                "px-6 py-2.5 rounded-full transition-all duration-300 font-medium text-sm md:text-base",
+                "rounded-full px-4 py-2 text-xs font-medium transition-all duration-300 sm:px-6 sm:py-2.5 sm:text-sm md:text-base",
                 "border border-transparent hover:shadow-lg",
                 "flex items-center gap-2",
                 activeCategory === category.id
@@ -245,7 +245,7 @@ export const SkillsSection = () => {
           <InfiniteScrollSkills skills={skills} />
         ) : (
           <motion.div 
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
             layout
           >
             <AnimatePresence mode="popLayout">
@@ -259,22 +259,22 @@ export const SkillsSection = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className="bg-card p-6 rounded-2xl border border-border/30 hover:border-red-500/50 transition-all duration-300 shadow-sm hover:shadow-lg group"
+                    className="group rounded-xl border border-border/30 bg-card p-4 shadow-sm transition-all duration-300 hover:border-red-500/50 hover:shadow-lg sm:rounded-2xl sm:p-6"
                   >
-                    <div className="flex items-start gap-4 mb-5">
-                      <div className="w-12 h-12 rounded-full bg-card border-2 border-red-500/50 flex items-center justify-center">
+                    <div className="mb-5 flex items-start gap-3 sm:gap-4">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 border-red-500/50 bg-card sm:h-12 sm:w-12">
                         <img 
                           src={iconSrc} 
                           alt={skill.name} 
-                          className="w-6 h-6 object-contain" 
+                          className="h-5 w-5 object-contain sm:h-6 sm:w-6" 
                         />
                       </div>
-                      <div className="flex-1">
-                        <div className="flex justify-between items-center">
-                          <h3 className="font-semibold text-lg group-hover:text-red-500 transition-colors">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center justify-between gap-3">
+                          <h3 className="truncate text-base font-semibold transition-colors group-hover:text-red-500 sm:text-lg">
                             {skill.name}
                           </h3>
-                          <span className={`text-sm font-medium px-2 py-1 rounded-full 
+                          <span className={`shrink-0 rounded-full px-2 py-1 text-xs font-medium sm:text-sm 
                             ${skill.level > 75 ? 'bg-emerald-500/10 text-emerald-500' : 
                               skill.level > 50 ? 'bg-amber-500/10 text-amber-500' : 
                               'bg-pink-500/10 text-pink-500'}`}>
@@ -309,3 +309,4 @@ export const SkillsSection = () => {
     </section>
   );
 };
+
