@@ -71,7 +71,7 @@ export const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/xwpbojaj', {
+      const response = await fetch('https://formspree.io/f/xaqzldlg', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -278,7 +278,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "w-full flex items-center justify-center gap-2 py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl bg-gradient-to-r from-red-600 to-red-400 text-white font-medium hover:opacity-90 transition-all duration-300 shadow-lg shadow-red-500/20 text-sm sm:text-base",
+                  "w-full flex items-center cursor-pointer justify-center gap-2 py-2 sm:py-3 px-4 sm:px-6 rounded-lg sm:rounded-xl bg-gradient-to-r from-red-600 to-red-400 text-white font-medium hover:opacity-90 transition-all duration-300 shadow-lg shadow-red-500/20 text-sm sm:text-base",
                   isSubmitting && "opacity-80 cursor-not-allowed"
                 )}
               >

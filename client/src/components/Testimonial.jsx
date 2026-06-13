@@ -15,7 +15,7 @@ export const TestimonialSection = () => {
       id: 1,
       name: "Aarav Sharma",
       role: "Founder at JaipurKart",
-      content: `Working with Sahil was smooth from the first call. He understood our business needs, built a clean full-stack solution, and kept us updated at every stage. The final website was fast, polished, and ready for real customers.`,
+      content: `Working with Satyam was smooth from the first call. He understood our business needs, built a clean full-stack solution, and kept us updated at every stage. The final website was fast, polished, and ready for real customers.`,
       rating: 5,
       image: ""
     },
@@ -23,7 +23,7 @@ export const TestimonialSection = () => {
       id: 2,
       name: "Priya Nair",
       role: "UI/UX Designer at Kochi Digital Studio",
-      content: `Sahil has a strong eye for detail. The animations feel modern without slowing the page down, and the interface is easy to scan on both mobile and desktop. His work gave our product a much more professional feel.`,
+      content: `Satyam has a strong eye for detail. The animations feel modern without slowing the page down, and the interface is easy to scan on both mobile and desktop. His work gave our product a much more professional feel.`,
       rating: 5,
       image: ""
     },
@@ -31,7 +31,7 @@ export const TestimonialSection = () => {
       id: 3,
       name: "Rohan Mehta",
       role: "CTO at Pune SaaS Labs",
-      content: `From API integration to deployment, Sahil handled the complete stack with confidence. He solved issues quickly, explained decisions clearly, and delivered a reliable product our team could build on.`,
+      content: `From API integration to deployment, Satyam handled the complete stack with confidence. He solved issues quickly, explained decisions clearly, and delivered a reliable product our team could build on.`,
       rating: 5,
       image: ""
     },

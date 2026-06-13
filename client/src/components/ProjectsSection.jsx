@@ -225,7 +225,7 @@ export const ProjectsSection = () => {
                   setActiveFilter(category);
                   setShowAll(false);
                 }}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 lg:px-5 lg:text-sm ${
+                className={`px-3 py-1.5 cursor-pointer rounded-full text-xs font-medium transition-all duration-300 lg:px-5 lg:text-sm ${
                   activeFilter === category
                     ? "bg-background text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
@@ -415,7 +415,7 @@ export const ProjectsSection = () => {
               onClick={() => setShowAll(!showAll)}
               whileHover={{ y: -2, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
               whileTap={{ scale: 0.98 }}
-              className={`inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`inline-flex items-center justify-center px-6 py-3 cursor-pointer rounded-full font-medium transition-all duration-300 ${
                 showAll
                   ? "bg-muted text-foreground hover:bg-muted/90 border border-muted-foreground/20"
                   : "bg-gradient-to-r from-red-600 to-red-400 text-white hover:shadow-lg"
