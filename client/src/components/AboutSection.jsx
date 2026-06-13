@@ -162,7 +162,7 @@ export const AboutSection = () => {
             <div className="h-full rounded-xl border border-muted bg-muted/20 p-4 backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:border-red-500/30 hover:bg-muted/30 hover:shadow-xl sm:p-6 md:rounded-2xl md:p-8">
               <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center">
                 <div className="relative mx-auto h-16 w-16 overflow-hidden rounded-full border-2 border-red-500/30 transition-all duration-300 group-hover:scale-110 group-hover:border-red-500/50 sm:mx-0">
-                  <img src="/profile-logo.png" alt="Profile Picture" className="w-full h-full object-cover" />
+                  <img src="/profile-logo.jpeg" alt="Profile Picture" className="w-full h-full object-cover" />
                 </div>
                 <div className="text-center sm:text-left">
                   <h3 className="text-lg sm:text-xl font-bold transition-colors duration-300 group-hover:text-red-500">Personal Profile</h3>
